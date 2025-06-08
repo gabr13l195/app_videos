@@ -8,18 +8,29 @@ class Welcome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(title: Text("Welcome Screen"),),
+      backgroundColor: const Color.fromARGB(255, 193, 238, 191),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Welcome"),
-            FilledButton(
-              onPressed: () => Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Login()),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Text(
+                "Bienvenido",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 35, fontWeight: FontWeight.w500),
               ),
-              child: Text("Login"),
             ),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Text(
+                "Si quieres disfrutar de muchas peliculas y series, por favor inicia sesión o regístrate.",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
+              ),
+            ),
+            btnLogin(context),
+            SizedBox(height: 10),
             btnRegistro(context),
           ],
         ),
@@ -28,13 +39,33 @@ class Welcome extends StatelessWidget {
   }
 }
 
+Widget btnLogin(context) {
+  return (FilledButton.icon(
+    onPressed: () => Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => Login()),
+    ),
+    label: Text("Login", style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600, fontFamily: 'RobotoMono'),),
+    icon: Icon(Icons.login_rounded),
+    style: ButtonStyle(
+      backgroundColor: MaterialStateProperty.all<Color>(const Color.fromARGB(255, 3, 136, 29)),
+      foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+
+    ),
+  ));
+}
+
 Widget btnRegistro(context) {
   return (ElevatedButton.icon(
     onPressed: () => Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => Registro()),
     ),
-    label: Text("Registro"),
-    icon: Icon(Icons.account_circle_outlined),
+    label: Text("Registro", style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600, fontFamily: 'RobotoMono'),),
+    icon: Icon(Icons.app_registration),
+    style: ButtonStyle(
+      backgroundColor: MaterialStateProperty.all<Color>(const Color.fromARGB(255, 3, 98, 101)),
+      foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+    ),
   ));
 }

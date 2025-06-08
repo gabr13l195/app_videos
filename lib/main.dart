@@ -19,10 +19,7 @@ class Cuerpo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("MAIN"),
-      ),
+    return Scaffold( 
       body: Welcome(),
     );
   }
