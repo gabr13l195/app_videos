@@ -8,12 +8,13 @@ class MiDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      backgroundColor: const Color.fromARGB(255, 193, 238, 191),
       child: ListView(
         children: [
           DrawerHeader(child: Column(
             children: [
               Text("Gabriel Videos"),
-              Expanded(child: Image.network("https://w7.pngwing.com/pngs/777/419/png-transparent-amazon-com-amazon-video-streaming-media-amazon-prime-television-prime-logo-television-blue-text-thumbnail.png")),
+              // Expanded(child: Image.network("")),
             ],
           )),
           ListTile(
