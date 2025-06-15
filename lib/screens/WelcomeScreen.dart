@@ -48,8 +48,8 @@ Widget btnLogin(context) {
     label: Text("Login", style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600, fontFamily: 'RobotoMono'),),
     icon: Icon(Icons.login_rounded),
     style: ButtonStyle(
-      backgroundColor: MaterialStateProperty.all<Color>(const Color.fromARGB(255, 3, 136, 29)),
-      foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+      backgroundColor: WidgetStateProperty.all<Color>(const Color.fromARGB(255, 3, 136, 29)),
+      foregroundColor: WidgetStateProperty.all<Color>(Colors.white),
 
     ),
   ));
@@ -64,8 +64,8 @@ Widget btnRegistro(context) {
     label: Text("Registro", style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600, fontFamily: 'RobotoMono'),),
     icon: Icon(Icons.app_registration),
     style: ButtonStyle(
-      backgroundColor: MaterialStateProperty.all<Color>(const Color.fromARGB(255, 3, 98, 101)),
-      foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+      backgroundColor: WidgetStateProperty.all<Color>(const Color.fromARGB(255, 3, 98, 101)),
+      foregroundColor: WidgetStateProperty.all<Color>(Colors.white),
     ),
   ));
 }
